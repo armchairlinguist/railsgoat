@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
       flash[:success] = "Your message has been deleted."
       redirect_to user_messages_path(user_id: current_user.id)
     else
-      flash[:error] = "Could not delete message."
+      flash[:error] = "Sorry, could not delete message."
     end
   end
 
