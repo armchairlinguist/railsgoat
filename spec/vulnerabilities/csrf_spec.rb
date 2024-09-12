@@ -12,7 +12,7 @@ feature "csrf" do
 
   scenario "attack\nTutorial: https://github.com/OWASP/railsgoat/wiki/R4-A8-CSRF", js: true do
     visit "/"
-    # TODO: is there a way to get this without visiting root first?
+    # TODO: a way to get this without visiting root first
     base_url = current_url
 
     login(normal_user)

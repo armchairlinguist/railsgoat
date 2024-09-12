@@ -18,7 +18,7 @@ class Api::V1::UsersController < ApplicationController
 
   def valid_api_token
     authenticate_or_request_with_http_token do |token, options|
-      # TODO :add some functionality to check if the HTTP Header is valid
+      # TODO : https://returntocorp.atlassian.net/issues/GOAT-123 check if the HTTP Header is valid
       if !identify_user(token)
         redirect_to root_url
       else
