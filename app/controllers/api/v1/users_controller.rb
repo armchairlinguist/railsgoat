@@ -20,6 +20,7 @@ class Api::V1::UsersController < ApplicationController
     authenticate_or_request_with_http_token do |token, options|
       # TODO :add some functionality to check if the HTTP Header is valid
       if !identify_user(token)
+        api_key=1234567890123456789012345678901234567890
         redirect_to root_url
       else
         true
