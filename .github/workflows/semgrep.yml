@@ -9,7 +9,8 @@ on:
     - .github/workflows/semgrep.yml
   schedule:
   # random HH:MM to avoid a load spike on GitHub Actions at 00:00
-  - cron: 32 0 * * *
+  - cron: 32 0 * * SUN
+  - cron: 17 4 * * *
 name: Semgrep
 jobs:
   semgrep:
