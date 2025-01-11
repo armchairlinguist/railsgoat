@@ -42,6 +42,8 @@ Railsgoat::Application.configure do
  #      :host => 'railsgoat.dev',
  #      :ignore => [ %r{dont/modify\.html$} ]
  # )
+  logger = Logger.new('log/app.log')
+  use Rack::CommonLogger, logger
 
   # For Rails 4.0+
   # Do not eager load code on boot. This avoids loading your whole application
