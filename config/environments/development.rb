@@ -6,7 +6,7 @@ Railsgoat::Application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-
+  # TODO: anything
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
@@ -42,6 +42,8 @@ Railsgoat::Application.configure do
  #      :host => 'railsgoat.dev',
  #      :ignore => [ %r{dont/modify\.html$} ]
  # )
+  logger = Logger.new('log/app.log')
+  use Rack::CommonLogger, logger
 
   # For Rails 4.0+
   # Do not eager load code on boot. This avoids loading your whole application
